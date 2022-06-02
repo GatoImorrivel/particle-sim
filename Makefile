@@ -30,7 +30,7 @@ all: build_dir out_dir bin
 re: clean all run
 
 bin: $(OBJS)
-	@echo "LL		$<"
+	@echo "LL		$^"
 	@cp extern/CSFML/bin/* $(OUT_DIR)
 	@$(CC) $^ $(LDFLAGS) -o $(OUT_DIR)/$(EXEC).exe  
 	@echo "Finished compilation"

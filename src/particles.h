@@ -19,7 +19,4 @@ particle empty_particle();
 particle sand_particle();
 particle water_particle();
 
-void update_sand(unsigned int x, unsigned int y);
-void update_water(unsigned int x, unsigned int y);
-
 #endif // __PARTICLES_H__

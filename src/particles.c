@@ -1,4 +1,5 @@
 #include "particles.h"
+#include "simulation.h"
 
 particle empty_particle()
 {
