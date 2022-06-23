@@ -5,10 +5,10 @@
 
 typedef struct position
 {
-    unsigned int x;
-    unsigned int y;
+    int x;
+    int y;
 } position;
 
-position create_pos(unsigned int x, unsigned int y);
+position create_pos(int x, int y);
 
 #endif // __POSITION_H__
