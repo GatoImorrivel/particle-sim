@@ -32,8 +32,10 @@ int main()
         {
             if (event.type == sfEvtClosed)
                 sfRenderWindow_close(window);
-            else if (event.key.code == sfKeyR)
-                simulation_randomize(&simulation);
+            if (event.type == sfEvtKeyPressed) {
+                if(event.key.code == sfKeyR)
+                    simulation_randomize(&simulation);
+            }
             
         }
         sfRenderWindow_clear(window, clearColor);

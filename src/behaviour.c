@@ -9,7 +9,6 @@ void simulate_sand(simulation *const simulation, const position pos)
     };
     const unsigned int numOfNeighbours = 3;
 
-    /*
     particle *neighbour;
     particle *self;
     for (size_t i = 0; i < numOfNeighbours; i++)
@@ -22,13 +21,6 @@ void simulate_sand(simulation *const simulation, const position pos)
             simulation_write_texture_pixel(simulation, simulation_get_index(simulation, pos) * COLOR_CHANNELS, self->color);
             break;
         }
-    }
-    */
-
-    if (simulation_validate_pos(simulation, neighbours[0]) && simulation_particle_at(simulation, neighbours[0])->id == EMPTY_P)
-    {
-        simulation_swap_particles(simulation, pos, neighbours[0]);
-        simulation_write_texture_pixel(simulation, simulation_get_index(simulation, pos) * COLOR_CHANNELS, simulation_particle_at(simulation, pos)->color);
     }
 }
 

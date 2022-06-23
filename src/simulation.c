@@ -45,7 +45,7 @@ void simulation_draw(simulation *const simulation, sfRenderWindow *window)
 void simulation_update(simulation *const simulation)
 {
     position pos;
-    for (size_t y = simulation->height - 1; y > 0; y--)
+    for (size_t y = simulation->height; y > 0; y--)
     {
         pos.y = y;
         for (size_t x = 0; x < simulation->width; x++)
@@ -104,7 +104,7 @@ void simulation_swap_particles(simulation *const simulation, const position pos1
 
 size_t simulation_get_index(const simulation *const simulation, position pos)
 {
-    return pos.y * simulation->height + pos.x;
+    return pos.y * simulation->width + pos.x;
 }
 
 bool simulation_validate_pos(const simulation *const simulation, position pos)
